@@ -81,44 +81,44 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: 0.5rem;
-            margin-bottom: 0.5 rem;
+            margin-bottom: 0.5rem;
             .pill {
                 background-color: rgba(255, 255, 255, 0.08);
                 border-radius: 10px;
                 padding: 0.2rem 0.6rem;
             }
-            .items {
-                list-style: none;
+        }
+        .items {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+            li {
+                background-color: $second-bg;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                padding: 0.6rem 0.8rem;
                 display: grid;
+                grid-template-columns: 1fr auto;
                 gap: 0.5rem;
-                li {
-                    background-color: $second-bg;
-                    border: 1px solid rgba(255, 255, 255, 0,08);
-                    padding: 0.6rem 0.8rem;
-                    display: grid;
-                    grid-template-columns: 1fr auto;
-                    gap: 0.5rem;
-                    align-items: center;
-                    .meta {
-                        color: $muted;
-                    }
-                    .mount {
-                        font-weight: bold;
-                    }
-                    .pill {
-                        margin-left: 0.5rem;
-                    }
-                    buttom.remove {
-                        background: transparent;
-                        color: $fg;
-                        border: 1px solid rgba(255, 255, 255, 0.14);
-                        border-radius: 10px;
-                        cursor: pointer;
-                        padding: 0.2rem 0.6rem;
-                        &:hover {
-                            border-color: #ff6b6b;
-                            color: #ff6b6b;
-                        }
+                align-items: center;
+                .meta {
+                    color: $muted;
+                }
+                .mount {
+                    font-weight: bold;
+                }
+                .pill {
+                    margin-left: 0.5rem;
+                }
+                button.remove {
+                    background: transparent;
+                    color: $fg;
+                    border: 1px solid rgba(255, 255, 255, 0.14);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    padding: 0.2rem 0.6rem;
+                    &:hover {
+                        border-color: #ff6b6b;
+                        color: #ff6b6b;
                     }
                 }
             }

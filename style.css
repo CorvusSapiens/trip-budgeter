@@ -68,19 +68,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: 0.5rem;
-  margin-bottom: 0.5 rem;
+  margin-bottom: 0.5rem;
 }
 .container .list .list-head .pill {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 0.2rem 0.6rem;
 }
-.container .list .list-head .items {
+.container .list .items {
   list-style: none;
   display: grid;
   gap: 0.5rem;
 }
-.container .list .list-head .items li {
+.container .list .items li {
   background-color: #0b0f14;
-  border: 1px solid rgba;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+.container .list .items li .meta {
+  color: #8b949e;
+}
+.container .list .items li .mount {
+  font-weight: bold;
+}
+.container .list .items li .pill {
+  margin-left: 0.5rem;
+}
+.container .list .items li button.remove {
+  background: transparent;
+  color: #e6edf3;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+}
+.container .list .items li button.remove:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
 }/*# sourceMappingURL=style.css.map */
