@@ -84,6 +84,7 @@ $('#sort-amount').addEventListener('click', ()=>{
     render();
     applyFilters();
 })
+
 $('#sort-date').addEventListener('click', ()=>{
     state = {...state, expenses:[...state.expenses].sort((a,b)=> (b.date || '').localeCompare(a.date || ''))};
     render();
@@ -101,6 +102,55 @@ $('#items').addEventListener('click', e=>{
 })
 
 // ---------- Load initial data
+const initialExpenses = [
+    {
+        id: '1',
+        title: 'Flight to Sydney',
+        category: 'Transport',
+        amount: 480,
+        date: '2025-09-01'
+    },
+    {
+        id: '2',
+        title: 'Hotel Stay',
+        category: 'Lodging',
+        amount: 320,
+        date: '2025-09-02'
+    },
+    {
+        id: '3',
+        title: 'Opera House Tour',
+        category: 'Entertainment',
+        amount: 75,
+        date: '2025-09-03'
+    },
+    {
+        id: '4',
+        title: 'Seafood Dinner',
+        category: 'Food',
+        amount: 56.5,
+        date: '2025-09-03'
+    },
+    {
+        id: '5',
+        title: 'Taxi to Airport',
+        category: 'Transport',
+        amount: 45,
+        date: '2025-09-04'
+    },
+    {
+        id: '6',
+        title: 'Souvenirs',
+        category: 'Other',
+        amount: 30,
+        date: '2025-09-04'
+    }
+    ];
+$('#seed').addEventListener('click', ()=>{
+    state = {...state, expenses:[...state.expenses, ...initialExpenses]}
+    render();
+    applyFilters();
+})
 
 // ---------- Initial render
 render()
